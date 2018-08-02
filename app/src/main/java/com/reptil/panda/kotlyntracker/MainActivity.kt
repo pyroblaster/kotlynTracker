@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import android.widget.Adapter
 import android.widget.Toast
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -15,9 +16,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
 
-
 class MainActivity : AppCompatActivity(),ILoadMore {
-    //Declare variable
+
     internal var items:MutableList<CoinModel> = ArrayList()
     internal  lateinit var adapter: CoinAdapter
     internal  lateinit var client:OkHttpClient
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity(),ILoadMore {
 
     }
 
-    private fun loadFrist10Coin() {
+    private fun loadFirst10Coin() {
         client = OkHttpClient()
         request = Request.Builder()
                 .url(String.format("https://api.coinmarketcap.com/v1/ticker/?start=0&limit=10"))
@@ -97,11 +97,11 @@ class MainActivity : AppCompatActivity(),ILoadMore {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        swipe_to_refresh.post { loadFrist10Coin() }
+        swipe_to_refresh.post { loadFirst10Coin() }
 
         swipe_to_refresh.setOnRefreshListener {
             items.clear() // Remove all item
-            loadFrist10Coin()
+            loadFirst10Coin()
             setUpAdapter()
         }
 

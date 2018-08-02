@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import com.reptil.panda.kotlyntracker.Common.Common
 import com.reptil.panda.kotlyntracker.Interface.ILoadMore
 import com.reptil.panda.kotlyntracker.Model.CoinModel
@@ -26,6 +27,8 @@ class CoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var oneHourChange = itemView.oneHour
     var twentyFourChange = itemView.twentyFourHour
     var sevenDayChange = itemView.sevenDay
+    var marketCap=itemView.marketCap
+
 }
 
 class CoinAdapter(recyclerView: RecyclerView, internal var activity: Activity, var items: List<CoinModel>) : RecyclerView.Adapter<CoinViewHolder>() {
@@ -74,6 +77,7 @@ class CoinAdapter(recyclerView: RecyclerView, internal var activity: Activity, v
         item.coinName.text = coinModel.name
         item.coinSymbol.text = coinModel.symbol
         item.coinPrice.text = coinModel.price_usd
+        item.marketCap.text = coinModel.market_cap_usd
         item.oneHourChange.text = coinModel.percent_change_1h + "%"
         item.twentyFourChange.text = coinModel.percent_change_24h + "%"
         item.sevenDayChange.text = coinModel.percent_change_7d + "%"

@@ -8,9 +8,10 @@ class CoinModel{
     var percent_change_1h:String?=null
     var percent_change_24h:String?=null
     var percent_change_7d:String?=null
+    var market_cap_usd:String?=null
 
-    constructor(){}
-    constructor(id: String, name: String, symbol: String, price_usd: String, percent_change_1h: String, percent_change_24h: String, percent_change_7d: String) {
+
+    constructor(id: String, name: String, symbol: String, price_usd: String, percent_change_1h: String, percent_change_24h: String, percent_change_7d: String , market_cap_usd: String) {
         this.id = id
         this.name = name
         this.symbol = symbol
@@ -18,7 +19,6 @@ class CoinModel{
         this.percent_change_1h = percent_change_1h
         this.percent_change_24h = percent_change_24h
         this.percent_change_7d = percent_change_7d
+        this.market_cap_usd = market_cap_usd
     }
-
-
 }
