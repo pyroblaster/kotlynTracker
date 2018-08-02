@@ -94,14 +94,7 @@
                         android:text="10,000"
                         android:textColor="@color/colorPrimary"  />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:text="$"
-                        android:textColor="@color/colorPrimary"
-                        />
+
 
                 </LinearLayout>
 
@@ -123,13 +116,7 @@
                         android:text="10,000"
                         android:textColor="@color/colorPrimary" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:text="$"
-                        android:textColor="@color/colorPrimary" />
+
 
 
 
@@ -153,10 +140,11 @@
 
                     <TextView
                         android:id="@+id/oneHour"
+                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginRight="16dp"
                         android:text="" />
 
@@ -171,6 +159,7 @@
 
                     <TextView
                         android:id="@+id/twentyFourHour"
+                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -188,6 +177,7 @@
 
                     <TextView
                         android:id="@+id/sevenDay"
+                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"

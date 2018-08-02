@@ -76,8 +76,8 @@ class CoinAdapter(recyclerView: RecyclerView, internal var activity: Activity, v
 
         item.coinName.text = coinModel.name
         item.coinSymbol.text = coinModel.symbol
-        item.coinPrice.text = coinModel.price_usd
-        item.marketCap.text = coinModel.market_cap_usd
+        item.coinPrice.text = coinModel.price_usd + " $"
+        item.marketCap.text = coinModel.market_cap_usd + " $"
         item.oneHourChange.text = coinModel.percent_change_1h + "%"
         item.twentyFourChange.text = coinModel.percent_change_24h + "%"
         item.sevenDayChange.text = coinModel.percent_change_7d + "%"
